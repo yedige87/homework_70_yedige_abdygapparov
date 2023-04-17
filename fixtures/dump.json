@@ -1,0 +1,629 @@
+[
+{
+  "model": "webapp.todo",
+  "pk": 1,
+  "fields": {
+    "status": "in_progress",
+    "title": "чтение книги о Багратионе",
+    "text": "чтение исторической книги \"Багратион\"",
+    "deadline": "2023-01-06",
+    "project": 3,
+    "type": 3,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.506Z",
+    "updated_at": "2023-03-10T11:47:39.732Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 2,
+  "fields": {
+    "status": "done",
+    "title": "приготовление блюда",
+    "text": "покупка продуктов, обработка и нарезка, приготовление",
+    "deadline": "2023-01-09",
+    "project": 2,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.524Z",
+    "updated_at": "2023-03-10T09:47:55.423Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 3,
+  "fields": {
+    "status": "new",
+    "title": "устранение ошибок в отчете",
+    "text": "пересчитать показатели в отчете",
+    "deadline": "2023-01-11",
+    "project": 4,
+    "type": 2,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.547Z",
+    "updated_at": "2023-03-10T04:31:29.547Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 4,
+  "fields": {
+    "status": "done",
+    "title": "замена колес на Авто",
+    "text": "поездка на СТО, замена на зимнюю резину",
+    "deadline": "2023-01-15",
+    "project": 1,
+    "type": 3,
+    "is_deleted": true,
+    "created_at": "2023-03-10T04:31:29.558Z",
+    "updated_at": "2023-03-10T10:12:20.121Z",
+    "deleted_at": "2023-03-10T10:12:20.120Z"
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 5,
+  "fields": {
+    "status": "new",
+    "title": "устранение протекающего крана",
+    "text": "вызов сантехника",
+    "deadline": "2023-01-16",
+    "project": 2,
+    "type": 2,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.569Z",
+    "updated_at": "2023-03-10T04:31:29.569Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 6,
+  "fields": {
+    "status": "done",
+    "title": "просмотр фильма \"Багдатский вор\"",
+    "text": "просмотр рекламируемого фильма",
+    "deadline": "2023-01-17",
+    "project": 3,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.580Z",
+    "updated_at": "2023-03-10T09:48:35.591Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 7,
+  "fields": {
+    "status": "new",
+    "title": "устранение бага в программе",
+    "text": "устранение бага в программе",
+    "deadline": "2023-01-18",
+    "project": 5,
+    "type": 2,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.591Z",
+    "updated_at": "2023-03-10T04:31:29.591Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 8,
+  "fields": {
+    "status": "done",
+    "title": "сбор багажа в командировку",
+    "text": "сбор необходимых вещей",
+    "deadline": "2023-01-19",
+    "project": 4,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.603Z",
+    "updated_at": "2023-03-10T09:48:57.904Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 9,
+  "fields": {
+    "status": "new",
+    "title": "косметический ремонт дома",
+    "text": "покупка обоев, клея, инструментов",
+    "deadline": "2023-01-22",
+    "project": 2,
+    "type": 3,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.613Z",
+    "updated_at": "2023-03-10T04:31:29.613Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 10,
+  "fields": {
+    "status": "in_progress",
+    "title": "мойка авто",
+    "text": "мойка авто",
+    "deadline": "2023-01-25",
+    "project": 1,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.623Z",
+    "updated_at": "2023-03-10T09:49:12.308Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 11,
+  "fields": {
+    "status": "in_progress",
+    "title": "изучение регулярных выражений",
+    "text": "изучение регулярных выражений",
+    "deadline": "2023-01-27",
+    "project": 5,
+    "type": 3,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.635Z",
+    "updated_at": "2023-03-10T09:49:29.484Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 12,
+  "fields": {
+    "status": "done",
+    "title": "публикация статьи",
+    "text": "сбор и изучение информации, подготовка описательной части и выводов, оформление",
+    "deadline": "2023-01-28",
+    "project": 4,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.646Z",
+    "updated_at": "2023-03-10T09:49:49.472Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 13,
+  "fields": {
+    "status": "new",
+    "title": "сбор модели самолета",
+    "text": "изучение инструкции, поэтапный сбор модели из деталей, покраска",
+    "deadline": "2023-01-31",
+    "project": 3,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.657Z",
+    "updated_at": "2023-03-10T04:31:29.657Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 14,
+  "fields": {
+    "status": "done",
+    "title": "поход в магазин",
+    "text": "покупка продуктов",
+    "deadline": "2023-02-02",
+    "project": 2,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.668Z",
+    "updated_at": "2023-03-10T09:50:10.236Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 15,
+  "fields": {
+    "status": "new",
+    "title": "выполнение домашней работы",
+    "text": "ознакомление с материалом, изучение задачи, поэтапное выполнение",
+    "deadline": "2023-02-03",
+    "project": 5,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.680Z",
+    "updated_at": "2023-03-10T04:31:29.680Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 16,
+  "fields": {
+    "status": "new",
+    "title": "съемка рекламного ролика",
+    "text": "поиск специалистов, подбор актеров, написание сценария, съемка",
+    "deadline": "2023-02-05",
+    "project": 4,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.691Z",
+    "updated_at": "2023-03-10T04:31:29.691Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 17,
+  "fields": {
+    "status": "in_progress",
+    "title": "ремонт замка багажника",
+    "text": "поездка на СТО",
+    "deadline": "2023-02-07",
+    "project": 1,
+    "type": 2,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.701Z",
+    "updated_at": "2023-03-10T09:50:23.470Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 18,
+  "fields": {
+    "status": "in_progress",
+    "title": "организация соревнования",
+    "text": "формирование команд-участников, разработка положения о соревновании, разработка регламента игр",
+    "deadline": "2023-02-09",
+    "project": 3,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.713Z",
+    "updated_at": "2023-03-10T09:50:37.650Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 19,
+  "fields": {
+    "status": "done",
+    "title": "курсы повышения квалификации: \"Поиск багов программе\"",
+    "text": "курсы повышения квалификации: \"Поиск багов программе\"",
+    "deadline": "2023-02-12",
+    "project": 4,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.724Z",
+    "updated_at": "2023-03-10T09:50:54.387Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 20,
+  "fields": {
+    "status": "new",
+    "title": "изучение раздаточного материала",
+    "text": "изучение раздаточного материала",
+    "deadline": "2023-02-14",
+    "project": 5,
+    "type": 3,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.735Z",
+    "updated_at": "2023-03-10T04:31:29.735Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 21,
+  "fields": {
+    "status": "done",
+    "title": "замена масла в Авто",
+    "text": "поездка в сервисный центр, замена масла",
+    "deadline": "2023-02-15",
+    "project": 1,
+    "type": 3,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.746Z",
+    "updated_at": "2023-03-10T09:51:32.317Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 22,
+  "fields": {
+    "status": "new",
+    "title": "ремонт домашней техники",
+    "text": "выявление неполадок, приобретение (при необходимости) запасных частей, установка",
+    "deadline": "2023-02-17",
+    "project": 2,
+    "type": 2,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.757Z",
+    "updated_at": "2023-03-10T04:31:29.757Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 23,
+  "fields": {
+    "status": "in_progress",
+    "title": "диагностика авто",
+    "text": "поездка на СТО, прохождение диагностики",
+    "deadline": "2023-02-20",
+    "project": 1,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.768Z",
+    "updated_at": "2023-03-10T09:51:47.635Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 24,
+  "fields": {
+    "status": "new",
+    "title": "игра в шахматы",
+    "text": "игра в шахматы с соседом",
+    "deadline": "2023-02-21",
+    "project": 3,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.779Z",
+    "updated_at": "2023-03-10T04:31:29.779Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 25,
+  "fields": {
+    "status": "done",
+    "title": "покупка подарков коллегам на 8 марта",
+    "text": "покупка подарков коллегам на 8 марта",
+    "deadline": "2023-02-28",
+    "project": 4,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2023-03-10T04:31:29.790Z",
+    "updated_at": "2023-03-10T09:52:02.061Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 26,
+  "fields": {
+    "status": "in_progress",
+    "title": "Задача Тестовая",
+    "text": "вепрвырва",
+    "deadline": "2023-03-25",
+    "project": 5,
+    "type": 1,
+    "is_deleted": true,
+    "created_at": "2023-03-10T11:50:31.140Z",
+    "updated_at": "2023-03-10T11:51:37.846Z",
+    "deleted_at": "2023-03-10T11:51:37.846Z"
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 27,
+  "fields": {
+    "status": "new",
+    "title": "Путешествие",
+    "text": "поездка в Бишкек",
+    "deadline": "2023-03-27",
+    "project": 8,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2023-03-20T18:27:26.134Z",
+    "updated_at": "2023-03-20T18:27:26.134Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 28,
+  "fields": {
+    "status": "new",
+    "title": "Инициализация проекта",
+    "text": "Инициализация проекта ЗДОРОВЬЕ",
+    "deadline": "2023-03-31",
+    "project": 6,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2023-03-21T08:23:45.965Z",
+    "updated_at": "2023-03-21T08:23:45.965Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.todo",
+  "pk": 29,
+  "fields": {
+    "status": "new",
+    "title": "Инициализация проекта Хобби",
+    "text": "Инициализация проекта ХОББИ",
+    "deadline": "2023-03-31",
+    "project": 7,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2023-03-21T08:25:08.235Z",
+    "updated_at": "2023-03-21T08:25:08.235Z",
+    "deleted_at": null
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 1,
+  "fields": {
+    "type": "Task",
+    "created_at": "2023-03-10T04:30:08.629Z",
+    "updated_at": "2023-03-10T04:30:08.629Z"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 2,
+  "fields": {
+    "type": "Bug",
+    "created_at": "2023-03-10T04:30:08.645Z",
+    "updated_at": "2023-03-10T04:30:08.645Z"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 3,
+  "fields": {
+    "type": "Enhancement",
+    "created_at": "2023-03-10T04:30:08.667Z",
+    "updated_at": "2023-03-10T04:30:08.667Z"
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 1,
+  "fields": {
+    "project": "Авто",
+    "text": "Проект Авто",
+    "date_start": "2023-01-01",
+    "date_end": "2023-03-31",
+    "created_at": "2023-03-10T04:27:57.404Z",
+    "updated_at": "2023-03-20T10:49:46.209Z",
+    "users": [
+      1,
+      2,
+      5,
+      8
+    ]
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 2,
+  "fields": {
+    "project": "Дом",
+    "text": "Проект Дом",
+    "date_start": "2023-01-01",
+    "date_end": "2023-03-31",
+    "created_at": "2023-03-10T04:27:57.421Z",
+    "updated_at": "2023-03-20T10:49:13.152Z",
+    "users": [
+      1,
+      11,
+      12,
+      13
+    ]
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 3,
+  "fields": {
+    "project": "Досуг",
+    "text": "Проект Досуг",
+    "date_start": "2023-01-01",
+    "date_end": "2023-03-31",
+    "created_at": "2023-03-10T04:27:57.443Z",
+    "updated_at": "2023-03-21T09:18:27.209Z",
+    "users": [
+      1,
+      3,
+      6,
+      9
+    ]
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 4,
+  "fields": {
+    "project": "Работа",
+    "text": "Проект Работа",
+    "date_start": "2023-01-01",
+    "date_end": "2023-03-31",
+    "created_at": "2023-03-10T04:27:57.454Z",
+    "updated_at": "2023-03-21T10:55:05.151Z",
+    "users": [
+      1,
+      4,
+      7,
+      10
+    ]
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 5,
+  "fields": {
+    "project": "Учеба",
+    "text": "Проект Учеба",
+    "date_start": "2023-01-01",
+    "date_end": "2023-03-31",
+    "created_at": "2023-03-10T04:28:53.234Z",
+    "updated_at": "2023-03-20T18:03:29.108Z",
+    "users": [
+      1,
+      4,
+      12,
+      13
+    ]
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 6,
+  "fields": {
+    "project": "Здоровье",
+    "text": "Проект \"Здоровье\"",
+    "date_start": "2023-01-01",
+    "date_end": "2023-03-31",
+    "created_at": "2023-03-10T05:05:37.582Z",
+    "updated_at": "2023-03-10T05:05:37.582Z",
+    "users": [
+      1
+    ]
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 7,
+  "fields": {
+    "project": "Хобби",
+    "text": "Проект хобби",
+    "date_start": "2023-01-01",
+    "date_end": "2023-03-31",
+    "created_at": "2023-03-10T09:40:32.797Z",
+    "updated_at": "2023-03-10T09:40:32.824Z",
+    "users": [
+      1
+    ]
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 8,
+  "fields": {
+    "project": "Путешествие",
+    "text": "Проект путешествие",
+    "date_start": "2023-05-01",
+    "date_end": "2023-05-15",
+    "created_at": "2023-03-20T11:02:25.147Z",
+    "updated_at": "2023-03-20T11:02:25.148Z",
+    "users": [
+      1,
+      8
+    ]
+  }
+}
+]

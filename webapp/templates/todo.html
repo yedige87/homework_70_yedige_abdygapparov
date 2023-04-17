@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title%}ToDo{% endblock %}
+{% block menu %}
+    {% if user.is_authenticated %}
+        {% if perms.webapp.add_todo %}
+            <a href="{% url 'todo_add' %}" class="btn btn-primary">Create Task</a>
+        {% endif %}
+        {% if perms.webapp.change_todo %}
+            <a href="{% url 'todo_update' todo.pk%}" class="btn btn-success">Update Task</a>
+        {% endif %}
+        {% if perms.webapp.delete_todo %}
+            <a href="{% url 'todo_delete' todo.pk%}" class="btn btn-danger">Delete Task</a>
+        {% endif %}
+{% endif %}
+{% endblock %}
+{% block content %}
+    {% if todo.is_deleted %}
+        <h1>Ошибка 404</h1>
+        <h1>Задача не найдена</h1>
+    {% else %}
+        <div class="container">
+            <h1>Задача</h1>
+            <p>Название : {{ todo.title }}</p>
+            <p>Описание : {{ todo.text }}</p>
+            <p>Завершить: {{ todo.deadline }}</p>
+            <p>Статус   : {{ todo.get_status_display }}</p>
+            <p>Проект   : {{ todo.project }}</p>
+            <p>Тип      : {{ todo.type }}</p>
+            <p>Создано: {{ todo.created_at }}</p>
+        </div>
+    {% endif %}
+{% endblock %}

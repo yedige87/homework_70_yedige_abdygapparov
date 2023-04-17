@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}Return to Home Page{% endblock %}
+{% block menu %}
+    <a href="{% url 'projects_view' %}">Projects</a>
+{% endblock %}
+{% block content %}
+{% include 'partial/search.html' %}
+    <br/>
+    {% if todos %}
+    <h1>Полный список задач</h1>
+    <table>
+        <tbody>
+        <tr class="head">
+            <th>Полное  наименование  задачи</th>
+            <th>Завершить</th>
+            <th>Статус</th>
+            <th>Проект</th>
+            <th>Тип</th>
+            <th>Подробнее</th>
+        </tr>
+
+    {% for todo in todos %}
+        <tr>
+            <td>{{todo.title}}</td>
+            <td>{{todo.deadline}}</td>
+            <td>{{todo.get_status_display}}</td>
+            <td>
+            {% if todo.project in projects %}
+
+                <a href="{% url 'project_detail' todo.project_id %}" class='btn btn-success btn-sm'>{{todo.project}}</a>
+            {% else %}
+                <a href="{% url 'project_detail' todo.project_id %}" class='btn btn-secondary btn-sm disabled' aria-disabled="true">{{todo.project}}</a>
+            {% endif %}
+
+            </td>
+            <td>{{todo.type}}</td>
+            <td>
+            {% if todo.project in projects %}
+                <a href="{% url 'todo_detail' todo.id %}" class='btn btn-success btn-sm'>Подробнее... </a>
+                {% else %}
+                <a href="{% url 'todo_detail' todo.id %}" class='btn btn-secondary btn-sm disabled' aria-disabled="true">Подробнее... </a>
+            {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+
+    <br/>
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+    {% else %}
+    <h1>Ошибка 404</h1>
+    <h1>задачи не найдены.</h1>
+    {% endif %}
+<br/><br/>
+    <span>Проекты текущего пользователя: </span>
+    {% for proj in projects %}
+        <span>{{proj.project}}</span>
+    {% endfor %}
+
+{% endblock %}
+

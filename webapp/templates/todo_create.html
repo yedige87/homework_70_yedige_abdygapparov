@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}ToDo Create{% endblock %}
+{% block content %}
+    <h1>New Todo. Проект - {{todo.project}}</h1>
+<div class="form">
+    <form action="{% url 'todo_add' %}" method="post">
+        {% include 'partial/input_form.html' with button_text='Создать' %}
+    </form>
+</div>
+{% endblock %}
+

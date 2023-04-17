@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title%}Project confirm delete{% endblock %}
+{% block menu %}
+
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <h1>Вы действительно хотите удалить проект?</h1>
+        <p>Title: {{ project.project }}</p>
+        <p>Text: {{ project.text }}</p>
+        <form action="{% url 'project_confirm_delete' project.pk %}" method="post">
+            {% csrf_token %}
+            <p><input class="btn btn-danger btn-sm" type="submit" value="Удалить"></p>
+            <p><a class="btn btn-primary btn-sm" href="{% url 'project_detail' project.pk %}">Отмена</a></p>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}Projects{% endblock %}
+{% block menu %}
+{% if user.is_authenticated %}
+    {% if perms.webapp.add_project %}
+    <a href="{% url 'project_add' %}">Add Project</a>
+    {% endif %}
+{% endif %}
+{% endblock %}
+{% block content %}
+    <br/>
+    {% if projects %}
+    <h1>Список проектов</h1>
+    <table>
+        <tbody>
+        <tr class="head">
+            <th>Наименование</th>
+            <th>Начало</th>
+            <th>Окончание</th>
+            <th>Подробнее</th>
+            <th>Исполнители</th>
+
+        </tr>
+
+    {% for project in projects %}
+        <tr>
+            <td>{{project.project}}</td>
+            <td>{{project.date_start}}</td>
+            <td>{{project.date_end}}</td>
+            <td>
+            {% if user in project.users.all %}
+            <a href="{% url 'project_detail' project.id %}" class='btn btn-success btn-sm'>Подробнее... </a>
+            {% else %}
+            <a href="{% url 'project_detail' project.id %}" class='btn btn-secondary btn-sm disabled' aria-disabled="true">Подробнее... </a>
+            {% endif %}
+            </td>
+            <td>
+                {% for member in project.users.all %}
+                <span>{{member}},</span>
+                {% endfor %}
+            </td>
+        </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+    <br/>
+    {% else %}
+    <h1>Ошибка 404</h1>
+    <h1>Страница отсутствует.</h1>
+    {% endif %}
+{% endblock %}
+

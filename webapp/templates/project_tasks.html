@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block title %}Project tasks{% endblock %}
+{% block menu %}
+<a href="{% url 'projects_view' %}">Projects</a>
+{% if user.is_authenticated %}
+    {% if perms.webapp.add_todo %}
+            <a href="{% url 'todo_add' %}">Add Task</a>
+    {% endif %}
+
+    {% if todos %}
+        {% if perms.webapp.view_project %}
+             <a href="{% url 'project_view' todos.0.project_id %}">Project View</a>
+        {% endif %}
+        {% if perms.webapp.change_project %}
+             <a href="{% url 'project_edit' todos.0.project_id %}">Project Edit</a>
+        {% endif %}
+        {% if perms.webapp.change_project_users %}
+             <a href="{% url 'project_users' todos.0.project_id %}">Edit Users</a>
+        {% endif %}
+        {% if perms.webapp.delete_project %}
+             <a href="{% url 'project_delete' todos.0.project_id %}">Delete Project</a>
+        {% endif %}
+    {% endif %}
+{% endif %}
+
+{% endblock %}
+{% block content %}
+{% include 'partial/search.html' %}
+    <br/>
+    {% if todos %}
+    <h1>Задачи проекта "{{todos.0.project}}"</h1>
+
+
+    <table>
+        <tbody>
+        <tr class="head">
+            <th>Полное  наименование  задачи</th>
+            <th>Завершить</th>
+            <th>Статус</th>
+            <th>Проект</th>
+            <th>Тип</th>
+            <th>Подробнее</th>
+        </tr>
+
+    {% for todo in todos %}
+        <tr>
+            <td>{{todo.title}}</td>
+            <td>{{todo.deadline}}</td>
+            <td>{{todo.get_status_display}}</td>
+            <td>{{todo.project}}</td>
+            <td>{{todo.type}}</td>
+            <td>
+            {% if user in users %}
+            <a href="{% url 'todo_detail' todo.id %}" class='btn btn-success btn-sm'>Подробнее... </a>
+            {% else %}
+            <a href="{% url 'todo_detail' todo.id %}" class='btn btn-secondary btn-sm'>Подробнее... </a>
+            {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+    <br/><br/>
+       {% if users %}
+    <h4>
+    <span> Участники проекта: </span>
+    {% for member in users %}
+    <span> {{member}}, </span>
+    {% endfor %}
+    </h4>
+    {% endif %}
+    {% else %}
+    <h1>Ошибка 404</h1>
+    <h1>задачи не найдены.</h1>
+    {% endif %}
+
+{% endblock %}
+

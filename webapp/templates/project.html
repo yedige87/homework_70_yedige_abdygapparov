@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title%}Project{% endblock %}
+{% block menu %}
+            <a href="{% url 'project_detail' project.pk%}" class="btn btn-success">Project Detail</a>
+    {% if user.is_authenticated %}
+        {% if perms.webapp.change_project %}
+            <a href="{% url 'project_edit' project.pk%}" class="btn btn-success">Update Project</a>
+        {% endif %}
+        {% if perms.webapp.delete_project %}
+            <a href="{% url 'project_delete' project.pk%}" class="btn btn-danger">Delete Project</a>
+        {% endif %}
+{% endif %}
+{% endblock %}
+{% block content %}
+    {% if project %}
+         <div class="container">
+            <h1>Проект</h1>
+            <p>Название : {{ project.project }}</p>
+            <p>Описание : {{ project.text }}</p>
+            <p>Участники :
+                {% for member in project.users.all %}
+                    <span>{{ member }},</span>
+                {% endfor %}
+            </p>
+            <p>Дата начала: {{ project.date_start }}</p>
+            <p>Дата завершения   : {{ project.date_end }}</p>
+            <p>Создано: {{ project.created_at }}</p>
+        </div>
+    {% else %}
+        <h1>Ошибка 404</h1>
+        <h1>Задача не найдена</h1>
+
+    {% endif %}
+{% endblock %}

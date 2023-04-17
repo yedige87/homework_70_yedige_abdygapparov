@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Project Edit{% endblock %}
+{% block content %}
+    <h1>Edit Project</h1>
+<div class="form">
+    <form action="{% url 'project_edit' project.id %}" method="post">
+        {% include 'partial/project_input.html' with button_text='Изменить' %}
+    </form>
+</div>
+{% endblock %}

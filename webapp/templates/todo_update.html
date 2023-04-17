@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}ToDo Update{% endblock %}
+{% block content %}
+    <h1>Edit Task. Проект - {{todo.project}}</h1>
+<div class="form">
+    <form action="{% url 'todo_update' todo.pk %}" method="post">
+{% include 'partial/input_form.html' with button_text='Редактировать' %}
+    </form>
+</div>
+{% endblock %}
