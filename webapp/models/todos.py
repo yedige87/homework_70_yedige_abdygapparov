@@ -15,8 +15,10 @@ class ToDo(models.Model):
     title = models.CharField(max_length=100, null=False, blank=False, verbose_name='Задача')
     text = models.TextField(max_length=2000, null=False, blank=False, verbose_name='Описание')
     deadline = models.CharField(max_length=20, null=False, blank=False, verbose_name='Исполнить до')
-    project = models.ForeignKey(verbose_name='Project', to='webapp.Project', related_name='todo', null=True, blank=False, on_delete=models.RESTRICT)
-    type = models.ForeignKey(verbose_name='Type', to='webapp.Type', null=True, blank=False, related_name='todo', on_delete=models.RESTRICT)
+    project = models.ForeignKey(verbose_name='Project', to='webapp.Project', related_name='todo', null=True,
+                                blank=False, on_delete=models.CASCADE)
+    type = models.ForeignKey(verbose_name='Type', to='webapp.Type', null=True, blank=False, related_name='todo',
+                             on_delete=models.CASCADE)
     is_deleted = models.BooleanField(verbose_name='удалено', null=False, default=False)
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата и время создания')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Дата и время изменения')

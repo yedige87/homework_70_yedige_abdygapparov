@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from api.views import TasksAPIView, DetailView, UpdateView, DeleteView
+from api.views import TasksAPIView, DetailView, UpdateView, DeleteView, CreateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,6 +24,7 @@ urlpatterns = [
     path('api/tasks', TasksAPIView.as_view()),
     path('api/tasks/<int:pk>', DetailView.as_view()),
     path('api/tasks/<int:pk>/update', UpdateView.as_view()),
+    path('api/tasks//create', CreateView.as_view()),
     path('api/tasks/<int:pk>/delete', DeleteView.as_view()),
     path('auth/', include('accounts.urls')),
 ]
