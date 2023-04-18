@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 from api.views import TasksAPIView, DetailView, UpdateView, DeleteView, CreateView, ProjectsAPIView, ProjectDetailView, \
-    ProjectUpdateView, ProjectCreateView, ProjectDeleteView
+    ProjectUpdateView, ProjectCreateView, ProjectDeleteView, TypesAPIView, TypeDetailView, TypeUpdateView, \
+    TypeCreateView, TypeDeleteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,5 +33,10 @@ urlpatterns = [
     path('api/projects/<int:pk>/update', ProjectUpdateView.as_view()),
     path('api/projects//create', ProjectCreateView.as_view()),
     path('api/projects/<int:pk>/delete', ProjectDeleteView.as_view()),
+    path('api/types', TypesAPIView.as_view()),
+    path('api/types/<int:pk>', TypeDetailView.as_view()),
+    path('api/types/<int:pk>/update', TypeUpdateView.as_view()),
+    path('api/types//create', TypeCreateView.as_view()),
+    path('api/types/<int:pk>/delete', TypeDeleteView.as_view()),
     path('auth/', include('accounts.urls')),
 ]

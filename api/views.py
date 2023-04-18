@@ -2,8 +2,8 @@ from django.shortcuts import get_object_or_404
 from rest_framework import generics
 from rest_framework.response import Response
 
-from api.serializers import ToDoSerializer, ProjectSerializer
-from webapp.models import ToDo, Project
+from api.serializers import ToDoSerializer, ProjectSerializer, TypeSerializer
+from webapp.models import ToDo, Project, Type
 
 
 class TasksAPIView(generics.ListAPIView):
@@ -65,4 +65,36 @@ class ProjectDeleteView(generics.DestroyAPIView):
         pk = kwargs['pk']
         project = get_object_or_404(Project, pk=pk)
         project.delete()
+        return Response({'pk': pk})
+
+
+
+class TypesAPIView(generics.ListAPIView):
+    queryset = Type.objects.all()
+    serializer_class = TypeSerializer
+
+
+class TypeDetailView(generics.RetrieveAPIView):
+    queryset = Type.objects.all()
+    serializer_class = TypeSerializer
+
+
+class TypeUpdateView(generics.UpdateAPIView):
+    queryset = Type.objects.all()
+    serializer_class = TypeSerializer
+
+
+class TypeCreateView(generics.CreateAPIView):
+    queryset = Type.objects.all()
+    serializer_class = TypeSerializer
+
+
+class TypeDeleteView(generics.DestroyAPIView):
+    queryset = Type.objects.all()
+    serializer_class = TypeSerializer
+
+    def delete(self, request, *args, **kwargs):
+        pk = kwargs['pk']
+        type = get_object_or_404(Type, pk=pk)
+        type.delete()
         return Response({'pk': pk})
