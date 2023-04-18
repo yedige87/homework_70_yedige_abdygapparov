@@ -15,7 +15,6 @@ class ToDoSerializer(serializers.ModelSerializer):
 
 
 class ProjectSerializer(serializers.ModelSerializer):
-    todo = ToDoSerializer(many=True, read_only=True)
     class Meta:
         model = Project
         fields = (
@@ -24,7 +23,6 @@ class ProjectSerializer(serializers.ModelSerializer):
 
 
 class TypeSerializer(serializers.ModelSerializer):
-    type = ToDoSerializer(many=True, read_only=True)
     class Meta:
         model = Type
         fields = (
